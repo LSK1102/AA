@@ -8,6 +8,10 @@ namespace wed410928343.Controllers
 {
     public class ExamController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
         // GET: Exam
         public ActionResult About(float? A)
         {
