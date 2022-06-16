@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<p>學號:410928343</p>
+<p>姓名:陳戎筠</p>
+<p>喜歡的水果:</p>
+@{
+    String[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
+
+}
+<ol>
+
+    @foreach (var item in fruits)
+    {
+        <li>@item</li>
+    }
+</ol>
+@using (Html.BeginForm("About","Exam",FormMethod.Post)) {
+    <p>請輸入數字: @Html.TextBox("A")</p>
+    <p>查詢結果 @ViewBag.result </p>
+    <input type="submit" value="查詢" />
+
+}
+
